@@ -1,0 +1,49 @@
+@model Test.Models.User
+
+@{
+    ViewData["Title"] = "Registro";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <h2>@ViewData["Title"]</h2>
+        <form asp-controller="Auth" asp-action="Register" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <div class="form-group mb-3">
+                <label asp-for="Name" class="form-label">Nombre</label>
+                <input asp-for="Name" class="form-control" required />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group mb-3">
+                <label asp-for="Email" class="form-label">Correo Electrónico</label>
+                <input asp-for="Email" class="form-control" required />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group mb-3">
+                <label asp-for="Password" class="form-label">Contraseña</label>
+                <input asp-for="Password" type="password" class="form-control" required />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group mb-3">
+                <label for="ConfirmPassword" class="form-label">Confirmar Contraseña</label>
+                <input name="ConfirmPassword" type="password" class="form-control" required />
+                @if (ViewData.ModelState["ConfirmPassword"]?.Errors.Count > 0)
+                {
+                    <span class="text-danger">@ViewData.ModelState["ConfirmPassword"].Errors[0].ErrorMessage</span>
+                }
+            </div>
+            
+            <div class="form-group mb-3">
+                <button type="submit" class="btn btn-primary">Registrarse</button>
+            </div>
+
+            <div class="text-center">
+                <p>¿Ya tienes una cuenta? <a asp-controller="Auth" asp-action="Login">Inicia sesión aquí</a></p>
+            </div>
+        </form>
+    </div>
+</div>

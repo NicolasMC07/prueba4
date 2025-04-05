@@ -11,8 +11,8 @@ using Test.Data;
 namespace Test.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250402143959_CreatingTables")]
-    partial class CreatingTables
+    [Migration("20250405011323_Init")]
+    partial class Init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -44,6 +44,29 @@ namespace Test.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Email = "user1@example.com",
+                            Name = "User 1",
+                            Password = "password1"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Email = "user2@example.com",
+                            Name = "User 2",
+                            Password = "password2"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Email = "user3@example.com",
+                            Name = "User 3",
+                            Password = "password3"
+                        });
                 });
 #pragma warning restore 612, 618
         }

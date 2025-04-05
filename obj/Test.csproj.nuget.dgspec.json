@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/rwadmin/Escritorio/TODO/Test/Test.csproj": {}
+    "C:\\Users\\PC\\Desktop\\prueba4\\Test.csproj": {}
   },
   "projects": {
-    "/home/rwadmin/Escritorio/TODO/Test/Test.csproj": {
+    "C:\\Users\\PC\\Desktop\\prueba4\\Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/rwadmin/Escritorio/TODO/Test/Test.csproj",
+        "projectUniqueName": "C:\\Users\\PC\\Desktop\\prueba4\\Test.csproj",
         "projectName": "Test",
-        "projectPath": "/home/rwadmin/Escritorio/TODO/Test/Test.csproj",
-        "packagesPath": "/home/rwadmin/.nuget/packages/",
-        "outputPath": "/home/rwadmin/Escritorio/TODO/Test/obj/",
+        "projectPath": "C:\\Users\\PC\\Desktop\\prueba4\\Test.csproj",
+        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PC\\Desktop\\prueba4\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/rwadmin/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -43,6 +43,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
             "DotNetEnv": {
               "target": "Package",
               "version": "[3.1.1, )"
@@ -95,7 +99,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.407/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -40,5 +40,6 @@ namespace Test.Repository
             _context.Users.Update(user);
             return _context.SaveChangesAsync();
         }
+        
     }
 }

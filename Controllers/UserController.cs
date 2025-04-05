@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Test.Interface;
 using Test.Models;
 
 namespace Test.Controllers
-{
+{   
+    [Authorize]
     public class UserController(IUserServices userServices) : Controller
     {
         private readonly IUserServices _userServices = userServices;
